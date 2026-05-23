@@ -1,29 +1,49 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-body, html {
-    margin:0;
-    width:100%;
-    height:100%;
-    overflow:hidden;
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: black;
 }
+
 #game {
-    width:100vw;
-    height:100vh;
+    width: 100vw;
+    height: 100vh;
 }
 </style>
 </head>
 
 <body>
+
 <div id="game"></div>
 
 <script>
-    EJS_player = "#game";
-    EJS_core = "ppsspp";
-    EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
-    EJS_gameUrl = "https://pixeldrain.com/api/file/iAx1YYmk?download";
+window.EJS_player = "#game";
+
+/* PSP core */
+window.EJS_core = "psp";
+
+/* ROM URL */
+window.EJS_gameUrl = "https://pixeldrain.com/api/file/iAx1YYmk";
+
+/* EmulatorJS files */
+window.EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+
+/* PSP needs threads */
+window.EJS_threads = true;
+
+/* Optional */
+window.EJS_gameName = "PSP Game";
 </script>
 
 <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+
 </body>
 </html>
